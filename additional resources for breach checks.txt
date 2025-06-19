@@ -1,0 +1,85 @@
+These are a few additional resources for breach checks. Found on https://fmhy.net/adblockvpnguide#password-privacy-2fa
+
+https://intelx.io
+
+https://psbdmp.ws
+
+https://scatteredsecrets.com
+
+Doub-edi: https://rentry.co/fmhy-invite I think the discord got big-ish or something cause its semi-private now.
+
+So any link/website suggestions can be sent https://fmhy.net/feedback 
+
+Blue Team Resources
+
+Vulnerabilities
+
+Vulnerabilities are tracked by their CVE (common vulnerabilities and exposures) number. Stay better informed on known vulnerabilities:
+
+    cve.mitre.org/
+    nvd.nist.gov/vuln/full-listing
+    cvedetails.com/index.php
+    msrc.microsoft.com/update-guide/vulnerability
+    support.apple.com/
+
+URLs
+
+To determine if a fi le or URL/link is malicious before you take defensive action, or as part of your forensics investigations:
+
+    virustotal.com/gui/home/upload
+    urlscan.io/
+    checkphish.ai/
+
+News
+
+It is important for blue team members to stay current on evolving solutions to various cybersecurity problems:
+
+    youtube.com/@BlackHillsInformationSecurity
+    scmagazine.com/
+
+Phishing
+
+Good source for phishing tools, resources, and end-user training:
+
+    knowbe4.com/
+
+
+Exploitation
+
+Many red team exercises require you to first exploit (social or technical) their systems. Even if you are given an “assumed breach” option to gain initial access, stealthily gaining more shells often requires additional exploitation.
+
+Tools and techniques for gaining initial access:
+
+    gophish – quickly and easily set up phishing engagements
+        github.com/gophish/gophish
+    Use a SSO (Single Sign-On) vendor to provide a clean phishing link!
+        jordanpotti.com/2019/08/26/phishing-with-saml-and-sso-providers/
+
+Post-Exploitation
+
+Exploiting a vulnerability to get you a foothold is only the first step. Ideally, this leads you to additional systems that you are able to stealthily exploit to gain persistence and all of the shells.
+Red Team Resources
+
+    Responder – monitor and manipulate response in order to gain control of the network
+    Mimikatz – extract passwords, hashes, PIN codes, and Kerberos tickets from memory
+    Cobalt Strike – commercial (costly) product providing tool(s) for adversarial emulation
+
+Purple Team Resources
+
+MITRE ATT&CK®
+This knowledge-base of attacker behavior and techniques is a must-know. It is used as a common terminology for categorizing attacks.
+
+Purple Team Exercise Framework (PTEF)
+Further reading on purple teaming with different levels of maturity being described.
+
+Atomic Red Team
+Library of executable attacks (atomics) that can be executed without deep red teaming knowledge in order to simulate adversary activity. It is utilized by many purple teaming frameworks and mapped to MITRE ATT&CK®.
+
+VECTR
+Free tool for planning, executing, and tracking purple teaming engagements. It can utilize Atomic Red Team atomics.
+
+MITRE CALDERA™
+Platform that can be used for purple teaming engagements. It includes functionality for performing adversary activity through a command-and control (C2) channel, among other things.
+
+DO-LAB
+Lab environment that is easily deployable in the Azure Cloud. Includes Active Directory, attacker and victim machines, and log aggregation in Sentinel.
