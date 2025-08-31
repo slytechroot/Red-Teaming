@@ -1,0 +1,25 @@
+powershell get-netcomputer | get-netloggedon
+
+(to see users and which computers they are logged on to)
+
+####
+
+powershell get-netloggedon  -ComputerName "win10user2.fun.com"
+(shows which users are logged on into that hostname)
+
+#####
+
+wmic ntdomain get domaincontrolleraddress, domainname
+
+######
+
+wmic /namespace:\\root\directory\ldap path ds_computer get ds_samaccountname
+
+#########
+
+qwinsta /server:win10user2
+
+(to check which other users are connected to that computer)
+
+##############
+

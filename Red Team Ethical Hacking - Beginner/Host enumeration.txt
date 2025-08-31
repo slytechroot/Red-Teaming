@@ -1,0 +1,53 @@
+systeminfo
+
+whoami /all
+
+net localgroup administrators
+
+
+wmic service where state="running" get caption, name, startmode, state
+
+wmic startup get caption, command
+
+netstat -anob
+(needs admin permission to show running exes)
+
+
+wmic process where name="spoolsv.exe" get name, processid, executablepath
+
+gwmi win32_process | select Name, Handle, CommandLine | findstr "spoolsv.exe"
+
+wmic product get name, version
+
+
+get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-object DisplayName, DisplayVersion, Publisher, InstallDate | Format-Table -Autosize
+
+
+dir /s *flag*
+(to search for any directory with the name flag in it).
+
+dir /A:H /s *flag*
+
+
+Which command views session information, such as users logged into a remote system?
+qwinsta
+
+
+Which command provides the current user's SID?
+whoami /groups
+
+
+Which parameter can you use for DIR to view only hidden files?
+/A:H
+
+
+
+
+
+
+
+
+
+
+
+

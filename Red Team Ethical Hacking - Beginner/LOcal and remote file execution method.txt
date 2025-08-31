@@ -1,0 +1,35 @@
+LOcal and remote file execution method
+
+
+wmic /node:192.168.122.132 process call create "C:\windows\system32\calc.exe"
+
+sc /?
+
+sc \\192.168.122.132 create test binpath= c:\windows\system32\calc.exe
+
+make sure it is running:
+sc \\192.168.122.132 query test
+
+let's start the service:
+sc \\192.168.122.132 start test
+
+delete service:
+sc \\192.168.122.132 delete test
+
+
+schtasks /create /S 192.168.122.132 /tn test /sc once /sd 01/01/1910 /st 00:00 /ru system /tr "c:\windows\system32\calc.exe"
+
+check if that task is running:
+schtask /s 192.168.122.132 /query /tn test
+
+start the task:
+schtask /s 192.168.122.132 /run /tn test
+
+delete our scheduled task:
+schtask /s 192.168.122.132 /delete /tn test
+
+
+
+
+
+

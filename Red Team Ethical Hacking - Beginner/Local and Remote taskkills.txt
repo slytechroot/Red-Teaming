@@ -1,0 +1,12 @@
+Local and Remote taskkills
+
+tasklist
+
+taskkill
+taskkill /PID 2736 
+(terminates calculator)
+
+tasklist /S 192.168.122.132 /PID 1288 
+
+wmic /node:192.168.122.132 process where processid=296 call terminate
+
